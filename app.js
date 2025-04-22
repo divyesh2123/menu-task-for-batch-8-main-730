@@ -82,3 +82,49 @@ const menu = [
 ];
 
 
+function displayData(f)
+{
+
+  const menuitems = f.map(function(a) {
+
+    return `<article class="menu-item">
+            <img src="${a.img}" alt="menu item" class="photo" />
+            <div class="item-info">
+              <header>
+                <h4>${a.title}</h4>
+                <h4 class="price">${a.price}</h4>
+              </header>
+              <p class="item-text">
+                  ${a.desc}
+              </p>
+            </div>
+          </article>`
+  
+  })
+  document.getElementById("menu").innerHTML = menuitems.join(" ");
+
+}
+displayData(menu);
+const displaybuttons = menu.map(function(a){
+
+  return ` <button type="button" class="filter-btn" data-id="all" onclick="filterData('${a.category}')">${a.category}</button>`
+})
+
+document.getElementById("btn").innerHTML = displaybuttons.join(" ");
+
+
+
+function filterData(categoyName)
+{
+  let filterItems = menu.filter(function(a) {
+
+    return a.category == categoyName;
+  });
+
+  displayData(filterItems);
+
+
+}
+
+
+
