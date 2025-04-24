@@ -127,4 +127,43 @@ function filterData(categoyName)
 }
 
 
+function lowtohigh()
+{
+   menu.sort(function(a,b){
+
+    if(a.price > b.price)
+    {
+      return 1;
+    }
+    else
+    {
+      return -1;
+    }
+
+     
+   })
+
+   displayData(menu);
+
+}
+
+function hightolow()
+{
+  menu.sort(function(a,b){
+
+    if(a.price < b.price)
+    {
+      return 1;
+    }
+    else
+    {
+      return -1;
+    }
+
+     
+   })
+
+   displayData(menu);
+}
+
 

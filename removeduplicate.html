@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+            let array=[1,22,11,11,232,22,11,11];
+
+            console.log(array.includes(1111));
+          let oh=  array.reduce(function(pre,cur){
+
+                if(pre.includes(cur)== false)
+            {
+                pre.push(cur);
+            }
+
+            return pre;
+
+            },[]);
+            
+
+            console.log(oh);
+
+    </script>
+</body>
+</html>

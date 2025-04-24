@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let obj = {
+            firstName : "Test"
+        }
+
+        let abc = {
+            "test": "T"
+        }
+
+        let ib = {...obj,...abc};
+
+        ib.firstName = "Abc";
+
+        console.log(ib);
+        console.log(obj)
+
+        let a=[1,2,3];
+        let b=[3,4,5];
+        let c= [...a,...b];
+
+        console.log(c);
+
+    </script>
+</body>
+</html>

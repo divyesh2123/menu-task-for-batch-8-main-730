@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+       
+
+        /* 
+            first time pre=1 means first value of array
+                       curre=2 means 2 value of array
+
+            2 time  pre= return value of first iteration 
+                    curr= next value from the array
+        
+        */
+        // let singlevalue = reduce1.reduce(function(pre,curr,index){
+
+        //         return pre*curr;
+        // });
+
+
+         /* 
+            first time pre= value of accum (value after the comma inside the reduce function)
+                       curre=1 means 1 value of array
+
+            2 time  pre= return value of first iteration 
+                    curr= next value from the array
+        
+        */
+        let reduce1= [1,22,33,44,66,12,22,344];
+
+
+        reduce1.push(123);
+
+        console.log(reduce1);
+
+
+        let singlevalue = reduce1.reduce(function(pre,curr,index){
+
+               return pre+curr;
+        },0);
+
+        console.log(singlevalue);
+
+    
+
+    </script>
+</body>
+</html>

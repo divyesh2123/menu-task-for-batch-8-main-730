@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let myarray=["pune","ahmedabad","vadodara","anand"];
+
+        myarray.sort().reverse();
+
+        console.log(myarray);
+
+        let mynumbers = [1,2,11,22,33,55,11,111,43];
+                        [2,11,22,33]
+                              
+        mynumbers.sort(function(a,b){
+
+           console.log('a :'+ a + 'b :' + b +  "array " + mynumbers);
+        
+            return b-a;
+        });
+
+        console.log(mynumbers);
+       
+
+    </script>
+</body>
+</html>
