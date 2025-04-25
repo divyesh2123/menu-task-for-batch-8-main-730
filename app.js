@@ -82,6 +82,8 @@ const menu = [
 ];
 
 
+
+
 function displayData(f)
 {
 
@@ -105,9 +107,25 @@ function displayData(f)
 
 }
 displayData(menu);
-const displaybuttons = menu.map(function(a){
 
-  return ` <button type="button" class="filter-btn" data-id="all" onclick="filterData('${a.category}')">${a.category}</button>`
+const unqiueCategory = menu.reduce(function(pre,curr){
+
+  if(pre.includes(curr.category)== false)
+  {
+    pre.push(curr.category);
+  
+  }
+  return pre;
+
+},[]);
+
+unqiueCategory.unshift("all");
+
+console.log(unqiueCategory);
+
+const displaybuttons = unqiueCategory.map(function(a){
+
+  return ` <button type="button" class="filter-btn" data-id="all" onclick="filterData('${a}')">${a}</button>`
 })
 
 document.getElementById("btn").innerHTML = displaybuttons.join(" ");
@@ -118,7 +136,7 @@ function filterData(categoyName)
 {
   let filterItems = menu.filter(function(a) {
 
-    return a.category == categoyName;
+    return a.category == categoyName || categoyName=="all";
   });
 
   displayData(filterItems);
